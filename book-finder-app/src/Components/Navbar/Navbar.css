@@ -1,0 +1,130 @@
+
+.navbar {
+  background-color: #4CAF50;  
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.brand-and-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.navbar-brand span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+
+.navbar-toggler-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler-btn:hover {
+  transform: rotate(90deg);
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d9176d;  
+}
+
+
+@media (max-width: 768px) {
+ 
+  .navbar-toggler-btn {
+    display: inline-block;
+  }
+
+ 
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #4CAF50; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .show-navbar-collapse {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+ 
+  .nav-link {
+    font-size: 1.8rem;
+  }
+}
